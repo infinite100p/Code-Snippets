@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pirates Booty</title>
+
+<style>
+#coords {
+  color: red;
+}
+</style>
+
+  <script>
+  window.onload = init;
+  
+      function init() {
+      var map = document.getElementById("map");
+      map.onmousemove = showCoords;
+  }
+
+function showCoords(eventObj) {
+    var map = document.getElementById("coords");
+    x = eventObj.clientX;
+    y = eventObj.clientY;
+    map.innerHTML = "Map coordinates: " 
+                                  + x + ", " + y;
+       }
+
+
+   var test = false;
+  
+   if (!test) {
+    console.log('test passed');
+   }
+
+var passengers = [ {name: "Jill", paid: true },
+                   {name: "Sue Property", paid: false }, 
+                   {name: "Mary", paid: true } ]
+
+/*
+function processPassengers(passengers, testFunction) {
+  for (i = 0; i < passengers.length; i++) {
+    return (testFunction(passengers[i]));
+  }
+}
+*/
+
+function processPassengers(passengers, testFunction) { 
+  for (var i = 0; i < passengers.length; i++) { 
+    if (testFunction(passengers[i])) { 
+      return false; 
+    } 
+  } 
+      return true; 
+}
+
+
+//print passenger's name and whether or not s(he) has paid
+function printPassenger(passenger) {
+  console.log("Name: " + passenger.name + ", Paid: " + passenger.paid);
+  //return;
+}
+
+processPassengers(passengers, printPassenger);
+
+  </script>
+</head>
+<body>
+<img id="map" src="map.jpg">
+<p id="coords">Move mouse to find coordinates...</p>
+</body>
+</html>

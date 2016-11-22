@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> Guess Images </title>
+
+<style>
+
+body {
+	margin: 20px;
+	background-color: black;
+}
+
+img {
+	width: 300px;
+	height: 334px;
+}
+
+</style>
+
+<script>
+	
+	window.onload = init;
+
+	function init() {
+		var images = document.getElementsByTagName("img"); 
+
+		for(i = 0; i < images.length; i++) {
+			images[i].onmouseover = toggleBlur;
+			images[i].onmouseout = reblur;
+
+		}
+
+		//img[0].onclick = unblur;  // <- why not just img.onclick = unblur ??
+		//img[1].onclick = unblur;
+		//img[2].onclick = unblur;
+
+
+}
+
+function toggleBlur(event) {
+    var img = event.target;
+
+    if (img.src.endsWith("blur.jpg")) {
+      img.src = img.id + ".jpg";
+
+     // setTimeout(reblur, 2000, img);
+
+    }
+}
+/*
+     else {
+      img.src = img.id + "blur.jpg"
+    }
+    */
+
+    function reblur(event) {
+    	var img = event.target;
+    	img.src = img.id + "blur.jpg";
+    	
+
+    	//img.src = img.id + "blur.jpg";
+    }
+
+
+	
+
+	function unblur(e) {
+
+		//var imageId = e.target.id;  //zero
+		//var img = document.getElementById(imageId);
+
+		var img = e.target;
+
+		//var clearImg = imageSource.substring(0, imageSource.length - 8);
+
+		var visibleImg = img.id + '.jpg';   // zero.jpg
+		var hiddenImg = img.id + 'blur.jpg'; // zeroblur.jpg
+
+		console.log(visibleImg);
+		console.log(img.src);
+
+
+
+		if (img.src.endsWith(hiddenImg)) {  // if image is hidden, reveal it
+			img.src = visibleImg;
+		} else {
+			img.src = hiddenImg;  // image is revealed, so hide the pic
+		}	
+		
+	
+	} 
+
+
+
+	String.prototype.endsWith = function(str) {
+		var size = this.substring(this.length - str.length, this.length);
+		console.log(size);
+
+		return size === str;
+
+	}
+	
+
+
+</script>
+
+</head>
+
+<body>
+
+<img id="zero" src="zeroblur.jpg">
+<img id="one" src="oneblur.jpg">
+<img id="two" src="twoblur.jpg">
+<br>
+<img id="three" src="threeblur.jpg">
+<img id="four" src="fourblur.jpg">
+<img id="five" src="fiveblur.jpg">
+</body>
+</html>

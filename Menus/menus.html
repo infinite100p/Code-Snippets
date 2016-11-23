@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Menu Items </title>
+</head>
+
+<body>
+
+   <div id="outer">
+    <div id="wrapper">
+        <form>
+
+            <div id="top-msg"> Select a restaurant... </div>
+            <br />
+            
+            <select id="menu" onchange="clearMessage()"> 
+                <option value="KF Tea">Kung Fu Tea</option>
+                <option value="McDonald's">McDonald's</option>       
+             </select>
+                <br />
+
+                <div id="buttons">
+                    <input type="button" id="cheapestItem" value="Cheapest Item">
+                    <p class="msg" id="msg1"></p>
+
+                    <input type="button" id="highestCost" value="Most Expensive Item">
+                    <p class="msg" id="msg2"></p>
+
+                    <input type="button" id="lowToHigh" value="Cheapest to Most Expensive">
+                    <p class="msg" id="msg3"></p>
+
+
+                    <input type="button" id="highToLow" value="Most Expensive to Cheapest">
+                    <p class="msg" id="msg4"></p>
+                </div>
+
+        </form>
+     </div>
+   </div>
+
+</body>
+
+</html>

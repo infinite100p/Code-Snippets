@@ -1,4 +1,3 @@
-        <script>
             var mcItem1 = {
                 name: "Big Mac",
                 price: 3.99,
@@ -339,4 +338,3 @@
             }
 
             */
-        </script>

@@ -4,7 +4,7 @@
 --------
 This repo contains a collection of random mini projects coded in HTML, CSS, and JavaScript. I find that this is a great way for me to keep track of my progress as I continue to learn and experiment with code. I plan to add greater functionality to these projects as I grow in my understanding and proficiency in these programming languages.
 
-**Specific Goals**
+**Goals**
 --------------
 
 **Menus Project**: 

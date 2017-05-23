@@ -1,0 +1,463 @@
+   html,
+   body {
+     height: 100%;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+   }
+   
+   .test {
+     background: #000;
+   }
+   
+   body {
+     padding-top: 50px;
+     overflow-y: hidden;
+     overflow-x: hidden;
+     background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('https://images.unsplash.com/photo-1484815843298-2c13cbc1b66f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;s=3a88298bdcdd35a812a9f7de41a50bf8');
+     background-size: cover;
+     background-repeat: no-repeat;
+   }
+   
+   .container {
+     max-width: 1500px;
+     margin: 3% auto;
+   }
+   
+   .jumbotron {
+     /*background: #101110;*/
+     color: #add8b1;
+     background: none;
+   }
+   
+   .jumbotron h1 {
+     color: #03b053;
+     /* #029145; */
+     /* #027a3a */
+     font-family: 'Source Sans Pro';
+     /*font-family: 'Arima Madurai';*/
+     font-size: 5em;
+     margin-top: -2%;
+   }
+   
+   h2 {
+     letter-spacing: 0.1em;
+   }
+   
+   #p1,
+   #p2 {
+     color: #add8b1;
+   }
+   
+   #clockdiv {
+     font-family: sans-serif;
+     color: #eff5ff;
+     font-weight: 100;
+     text-align: center;
+     font-size: 1.5em;
+     padding-top: 1%;
+   }
+   
+   #clockdiv > div {
+     padding: 0.3em;
+     border-radius: 3px;
+     display: inline-block;
+   }
+   
+   #clockdiv div > span {
+     padding: 0.4em 0.8em;
+     border-radius: 3px;
+     background: #00816A;
+     display: inline-block;
+   }
+   
+   #clockdiv > .smalltext {
+     font-size: 1em;
+   }
+   
+   .thumbnail {
+     border: none;
+     width: 70px;
+     background: none;
+     margin: 0 auto;
+   }
+   
+   #codepen {
+     width: 45px;
+     height: 45px;
+     margin-left: 30%;
+   }
+   
+   #linkedin {
+     width: 45px;
+     height: 45px;
+     margin-left: 28%;
+     background-color: #2a446d;
+     border-radius: 30%;
+     text-align: center;
+     line-height: 40px;
+     font-size: 1.5em;
+     color: #fff;
+     border: 2px solid #869aba;
+     font-family: 'Source Code Semi-Bold', sans-serif;
+   }
+   
+   #github {
+     width: 45px;
+     height: 45px;
+   }
+   
+   #soundcloud {
+     width: 45px;
+     height: 45px;
+   }
+   
+   #blog {
+     width: 53px;
+     height: 53px;
+     margin-top: -8%;
+   }
+   
+   #p1 {
+     margin-top: 4%;
+   }
+   
+   a {
+     color: rgba(255, 255, 255, 0.8);
+   }
+   
+   a:hover {
+     color: rgba(255, 255, 255, 1);
+     text-decoration: none;
+   }
+   
+   .btn {
+     margin-top: 50%;
+     margin-left: 185%;
+     background: #00816A;
+     border: none;
+     letter-spacing: 0.1em;
+     border-top: 1px solid gray;
+     height: 30px;
+     font-size: 0.8em;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+     color: rgba(255, 255, 255, 1);
+     transition: all 0.5s ease;
+     line-height: 0.5em;
+     /*text-transform: uppercase;*/
+   }
+   
+   .btn .btn-success .btn-md {
+     font-family: 'Arial';
+   }
+   
+   .fa-star {
+     color: rgb(255, 249, 145);
+     opacity: 1;
+     width: 10px;
+     height: 10px;
+   }
+   
+   div .col-xs-6 {
+     width: 40px;
+   }
+   
+   .fa-music {
+     position: relative;
+     margin-top: 57%;
+     margin-left: 400%;
+     color: #add8b1;
+     font-size: 0.8em;
+   }
+   
+   .fa-music:hover {
+     color: #5cb85c;
+     cursor: pointer;
+   }
+   
+   .fa-music:active {
+     color: #5cb85c;
+   }
+   
+   .myStar {
+     font-size: 12em;
+     position: absolute;
+   }
+   
+   .tinyStar {
+     font-size: 1em;
+     position: absolute;
+   }
+   
+   #wrapAllStars {
+     height: 100px;
+     max-width: 500px;
+     margin-top: -15px;
+     margin-left: -550px;
+     position: relative;
+     padding-bottom: 5%;
+   }
+   
+   @keyframes star-glow {
+     0%,
+     100% {
+       background: rgba(255, 249, 145, 0);
+       opacity: 1;
+       box-shadow: 0px 2px 20px 4px rgba(255, 249, 145);
+     }
+     50% {
+       background: rgba(255, 249, 145);
+       opacity: 0.3;
+       box-shadow: 0px 2px 20px 4px rgba(255, 249, 145);
+     }
+   }
+   /*MEDIA QUERIES*/
+   
+   @media screen and ( max-width: 2500px) {
+     #clockdiv {
+       height: 117px;
+     }
+     .myStar {
+       font-size: 1.8em;
+       margin-left: -8em;
+       margin-top: 0.3em;
+       width: 100%;
+     }
+     #icons {
+       z-index: 1;
+       padding-top: 20%;
+     }
+     #wrapAllStars {
+       max-width: 900%;
+       overflow-x: hidden;
+     }
+   }
+   
+   @media screen and (max-width: 1321px) {
+     .myStar {
+       margin-left: -4.7em;
+     }
+     #p1 {
+       margin-top: 6%;
+     }
+     #icons {
+       margin-top: -4%;
+     }
+     .btn {
+       padding-top: -300%;
+     }
+   }
+   
+   @media screen and (max-width: 995px) {
+     #clockdiv {
+       height: 105px;
+     }
+     .btn {
+       margin-top: 50%;
+     }
+     .myStar {
+       font-size: 2em;
+       margin-left: -1em;
+       margin-top: 0.3em;
+       width: 100%;
+     }
+     #wrapAllStars {
+       overflow-x: hidden;
+       max-width: 300%;
+     }
+   }
+   
+   @media screen and ( max-width: 992px) {
+     #p1,
+     #p2 {
+       font-size: 0.8em;
+     }
+   }
+   
+   @media screen and ( max-width: 720px) {
+     #p1,
+     #p2 {
+       font-size: 0.8em;
+     }
+   }
+   
+   @media screen and ( max-width: 682px) {
+     #icons {
+       margin-top: -6%;
+     }
+     #p1 {
+       margin-top: 10%
+     }
+   }
+   
+   @media screen and ( max-width: 600px) {
+     #clockdiv {
+       max-height: 100px;
+     }
+     .myStar {
+       font-size: 1.8em;
+       margin-left: 3em;
+       margin-top: 0.2em;
+     }
+     #p1,
+     #p2 {
+       font-size: 0.6em;
+     }
+   }
+   
+   @media screen and (max-width: 501px) {
+     #p1 {
+       margin-top: 10%;
+     }
+     #p1,
+     #p2 {
+       font-size: 0.5em;
+     }
+     #icons {
+       margin-top: -10%;
+       width: 80%;
+     }
+     .btn {
+       margin-top: 20%;
+       margin-left: 130%;
+     }
+     .fa-music {
+       margin-left: 338%;
+       margin-top: 31%;
+     }
+   }
+   
+   @media screen and (max-width: 466px) {
+     .btn {
+       margin-left: 115%;
+     }
+     .fa-music {
+       margin-left: 325%;
+     }
+   }
+   
+   @media screen and (max-width: 436px) {
+     .btn {
+       margin-left: 100%;
+     }
+     .fa-music {
+       margin-left: 310%;
+     }
+   }
+   
+   @media screen and (max-width: 429px) {
+     #p1,
+     #p2 {
+       font-size: 0.49em;
+     }
+     #icons {
+       margin-left: -12%;
+     }
+     .btn {
+       margin-left: 100%;
+     }
+     .fa-music {
+       margin-left: 310%;
+     }
+   }
+   
+   @media screen and ( max-width: 420px) {
+     .myStar {
+       font-size: 1.8em;
+       margin-left: 5em;
+       margin-top: 0.6em;
+     }
+     #p1 {
+       margin-top: 4em;
+     }
+   }
+   
+   @media screen and ( max-width: 385px) {
+     .jumbotron h1 {
+       font-size: 4em;
+     }
+     .jumbotron h2 {
+       font-size: 2em;
+     }
+     #p1,
+     #p2 {
+       font-size: 0.6em;
+     }
+     .myStar {
+       margin-top: -1%
+     }
+     #clockdiv {
+       font-size: 1.2em;
+       padding-top: 1%;
+       margin-top: 5%;
+     }
+     #icons {
+       margin-top: -5.5%;
+     }
+     .btn {
+       margin-left: 130%;
+     }
+     .fa-music {
+       margin-top: 33%;
+       margin-left: 280%;
+     }
+     @media screen and ( max-width: 375px) {
+       .btn {
+         margin-left: 120%;
+       }
+       #p1,
+       #p2 {
+         font-size: 0.5em;
+       }
+     }
+     @media screen and ( max-width: 321px) {
+       .jumbotron h1 {
+         font-size: 3em;
+       }
+       .jumbotron h2 {
+         font-size: 1.7em;
+       }
+       .container {
+         margin-top: -10%;
+       }
+       .myStar {
+         font-size: 1.8em;
+         margin-left: 8em;
+         margin-top: 0.6em;
+       }
+       #clockdiv {
+         font-size: 1em;
+         padding-top: 1%;
+         height: 70px;
+         margin-top: 5%;
+       }
+       .btn {
+         margin-left: 110%;
+       }
+       #p1,
+       #p2 {
+         font-size: 0.45em;
+       }
+       #p1 {
+         margin-top: 7em;
+       }
+       #icons {
+         margin-left: -16%;
+       }
+       .fa-music {
+         margin-left: 240%;
+       }
+     }
+     @media screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px),
+     screen and (max-width: 480px) {
+       @media screen (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) and (device-width: 1080px) and (orientation: portrait) {
+         .jumbotron h1 {
+           font-size: 1em;
+         }
+         #clockdiv {
+           font-size: 0.2em;
+           padding-top: 1%;
+           height: 20px;
+           margin-top: 5%;
+         }
+       }

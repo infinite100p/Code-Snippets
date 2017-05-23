@@ -4,5 +4,5 @@ Temporary landing page designed for responsive web.
 <br> Countdown to site launch.
 
 <h4>
-<a href="https://rawgit.com/inspirationaltwist/CodeSnippets/master/Landing%20Page/landing-page.html">View Live Demo</a>
+<a href="http://www.wanderlustpursuit.com/landingPage.html">View Live Demo</a>
 </h4>
